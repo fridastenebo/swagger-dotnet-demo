@@ -30,4 +30,11 @@ public class WeatherForecastController : ControllerBase
             })
             .ToArray();
     }
+
+    [HttpPut(Name = "WishingWell")]
+    public string Put(
+        [FromQuery] string weatherWish)
+    {
+        return $"Wish for \"{weatherWish}\" registered!";
+    }
 }
